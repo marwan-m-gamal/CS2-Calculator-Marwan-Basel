@@ -1,5 +1,7 @@
-#include <iostream> 
+#include <iostream>
+#include "calculator.h"
 using namespace std;
+
 
 template <class T>
 T add(T a, T b) {
@@ -31,6 +33,7 @@ int factorial(int a) {
     if (a < 0) {
         a *= -1;
     }
+    if (a == 0 || a == 1) return 1;
     return a*factorial(a-1);
 }
 
@@ -44,5 +47,5 @@ int lcm(int a, int b) {
 
 template <class T>
 T randNumGen(T min, T max) {
-    return min + rand() % (max - min - 1);
+    return min + rand() % (max - min + 1);
 }
