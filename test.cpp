@@ -1,6 +1,7 @@
 #include <iostream>
 #include "calculator.h"
 using namespace std;
+#include <cstdlib>
 
 
 int main() {
