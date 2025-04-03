@@ -1,3 +1,6 @@
+#include <iostream> 
+using namespace std;
+
 template <class T>
 T add(T a, T b) {
     return a + b;
@@ -16,14 +19,19 @@ T multiply(T a, T b) {
 
 template <class T>
 T divide(T a, T b) {
-    // basel will add the checking 
+    while (b == 0) {
+        cout << "Second number cannot be zero!" << endl;
+        cin >> b;
+    }
     return a/b;
 }
 
 
 int factorial(int a) {
-    // basel will add the negative condition 
-   return a*factorial(a-1);
+    if (a < 0) {
+        a *= -1;
+    }
+    return a*factorial(a-1);
 }
 
 int gcd(int a, int b) {
